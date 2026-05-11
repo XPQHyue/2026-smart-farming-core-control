@@ -1,5 +1,7 @@
 # 2026农业装备竞赛马铃薯捡拾机器人
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Build Status](https://github.com/XPQHyue/2026-smart-farming-core-control/actions/workflows/ci.yml/badge.svg)](https://github.com/XPQHyue/2026-smart-farming-core-control/actions) [![Stars](https://img.shields.io/github/stars/XPQHyue/2026-smart-farming-core-control?style=social)](https://github.com/XPQHyue/2026-smart-farming-core-control/stargazers)
+
 *作者：XPQH、CQX、LSL、WFS、LQQ*
 
 STM32F407VET6 智能小车底盘控制工程，面向国际大学生智能农业装备竞赛马铃薯捡拾机器人赛题的固件与上位机工具集合。项目以 Keil uVision 5 工程为主体，配套 PID 参数整定脚本、发布说明和硬件资料，便于团队协作、版本交付和后续维护。
@@ -32,7 +34,7 @@ STM32F407VET6 智能小车底盘控制工程，面向国际大学生智能农业装备竞赛马铃薯捡拾机器
 
 ### 3. 使用 PID 工具
 
-串口自动整定工具位于 `tools/`，可用于下发参数并观察整定过程。
+串口自动整定工具位于 `tools/`，推荐使用命令行工具 `pid_autotune_serial.py`（详见下文）。项目曾包含一个旧的 GUI 工具，但该 GUI 已不再维护，文档中不再对其进行推荐或分发，以免误导使用者。
 
 安装依赖：
 
@@ -44,13 +46,6 @@ pip install -r tools/requirements.txt
 
 ```powershell
 python tools/pid_autotune_serial.py --port COM8 --baud 9600 send --channels 0,1,2 --values 1000,1,1010
-```
-
-启动图形界面：
-
-```powershell
-pip install -r tools/requirements_gui.txt
-python tools/pid_autotune_gui.py
 ```
 
 ## 硬件与接口
@@ -79,9 +74,12 @@ python tools/pid_autotune_gui.py
 
 ## 版本历史（Changelog）
 
-- 2026-05-11 — v0.1 — 初始清理上传（`PID_upload` 干净镜像）并推送到 GitHub。
-- 2026-05-11 — v0.2 — 新增正式 `README.md`（项目说明、目录、快速开始、上位机工具说明）。
-- 2026-05-11 — v0.3 — 将赛事名称规范为“国际大学生智能农业装备竞赛马铃薯捡拾机器人”，并调整文案。
-- 2026-05-11 — v0.4 — 在 `README.md` 中加入作者名单：XPQH、CQX、LSL、WFS、LQQ。
+下列为仓库从清理、整理到公开发布期间的关键版本记录（摘录）。完整历史请参见 `CHANGELOG.md`。
 
+- 2026-05-11 — v0.1 — 初始清理上传（`PID_upload` 干净镜像）并本地提交（commit 29161a1）。
+- 2026-05-11 — v0.2 — 将清理后的仓库初始化并推送到 GitHub（首次上传）。
+- 2026-05-11 — v0.3 — 新增并完善 `README.md`（项目说明、目录、快速开始、上位机工具说明）。
+- 2026-05-11 — v0.4 — 规范赛事名称并加入作者名单（XPQH、CQX、LSL、WFS、LQQ）。
+
+(注：后续发布请在 `CHANGELOG.md` 中追加详细条目和 commit 引用)
 （注：后续发布请在此处追加版本号、日期与变更摘要）

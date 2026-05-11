@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "marus25.cortex-debug",
+        "bmd.stm32-for-vscode",
+        "ms-vscode.makefile-tools",
+        "eamodio.gitlens",
+        "GitHub.copilot"
+    ]
+}

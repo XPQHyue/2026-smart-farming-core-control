@@ -1,0 +1,36 @@
+{
+    "files.exclude": {
+        "**/OBJ": true,
+        "**/*.crf": true,
+        "**/*.d": true,
+        "**/Listings": true,
+        "**/.git": false,
+        "**/output": true
+    },
+    "search.exclude": {
+        "**/OBJ": true,
+        "**/Listings": true,
+        "**/*.axf": true,
+        "**/output": true
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4
+    },
+    "[h]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.tabSize": 4
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+    "C_Cpp.intelliSenseEngine": "default",
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "selection",
+    
+    "code-runner.ignoreSelection": true,
+    "code-runner.clearPreviousOutput": false,
+    "code-runner.runInTerminal": false,
+    "C_Cpp.codeAnalysis.runAutomatically": false,
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+    "stm32-for-vscode.makePath": false
+}

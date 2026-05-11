@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🔧 打开Keil编译器",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "start \"\" \"USER\\WHEELTEC.uvprojx\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            }
+        }
+    ]
+}
+

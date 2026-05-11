@@ -1,0 +1,6 @@
+# PID Auto Tune Result
+channels=0,1,2
+best_p0=1000.000000
+best_p1=1.000000
+best_p2=890.000000
+best_score=118.598663

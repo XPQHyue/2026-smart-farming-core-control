@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git checkout *)",
+      "Bash(dir /b \"C:\\\\Users\\\\Administrator\\\\.claude\\\\projects\\\\*.jsonl\")",
+      "Bash(python3 *)"
+    ]
+  }
+}

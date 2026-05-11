@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "J-Link调试",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/OBJ/WHEELTEC.axf",
+            "device": "STM32F407VE",
+            "interface": "swd",
+            "speed": 4000,
+            "preLaunchTask": "Keil编译（保持原配置）",
+            "showDevDebugOutput": false,
+            "stopAtEntry": true,
+            "runToEntryPoint": "main"
+        },
+        {
+            "name": "ST-Link调试",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/OBJ/WHEELTEC.axf",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "openOCDPreExamineCommands": [
+                "set CONNECT_UNDER_RESET on"
+            ],
+            "preLaunchTask": "Keil编译（保持原配置）",
+            "stopAtEntry": true,
+            "runToEntryPoint": "main"
+        },
+        {
+            "name": "DAPLink调试",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/OBJ/WHEELTEC.axf",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "openOCDPreExamineCommands": [
+                "set CONNECT_UNDER_RESET on"
+            ],
+            "preLaunchTask": "Keil编译（保持原配置）",
+            "stopAtEntry": true,
+            "runToEntryPoint": "main"
+        }
+    ]
+}
